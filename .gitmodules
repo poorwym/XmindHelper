@@ -1,0 +1,3 @@
+[submodule "vendor/aisuite"]
+	path = vendor/aisuite
+	url = https://github.com/poorwym/aisuite.git
