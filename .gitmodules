@@ -4,6 +4,3 @@
 [submodule "vendor/pptx2pdf"]
 	path = vendor/pptx2pdf
 	url = https://github.com/poorwym/pptx2pdf.git
-[submodule "vendor/MinerU"]
-	path = vendor/MinerU
-	url = https://github.com/poorwym/MinerU.git
