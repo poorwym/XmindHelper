@@ -4,3 +4,6 @@
 [submodule "vendor/pptx2pdf"]
 	path = vendor/pptx2pdf
 	url = https://github.com/poorwym/pptx2pdf.git
+[submodule "vendor/PDFInsight"]
+	path = vendor/PDFInsight
+	url = https://github.com/poorwym/PDFInsight.git
