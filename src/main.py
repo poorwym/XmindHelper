@@ -11,10 +11,10 @@ from vendor.pptx2pdf import pptx2pdf
 from vendor.PDFInsight.PDFInsight import par_pdf_by_path
 
 def move_pdf_to_int(pdf_dir):
+    os.makedirs("int/pdf", exist_ok=True)
     if os.path.exists(pdf_dir):
         pdf_files = [f for f in os.listdir(pdf_dir) if f.endswith('.pdf')]
         dest_dir = os.path.join(root_dir, "int", "pdf")
-        os.makedirs("int/pdf", exist_ok=True)
         for pdf_file in pdf_files:
             shutil.move(os.path.join(pdf_dir, pdf_file), os.path.join(dest_dir, pdf_file))
             print(f"移动文件: {os.path.join(pdf_dir, pdf_file)} 到 {os.path.join(dest_dir, pdf_file)}")
@@ -41,7 +41,7 @@ def process_pdfs_to_txt():
         print(f"pdf_path: {pdf_path}")
         try:
             # 使用PDFInsight处理PDF文件
-            text_content = par_pdf_by_path([pdf_path], ocr = True) #希望传入一个列表
+            text_content = par_pdf_by_path([pdf_path], ocr = False) #希望传入一个列表
             
             # 将提取的文本保存到txt文件
             with open(txt_path, 'w', encoding='utf-8') as f:
@@ -52,7 +52,7 @@ def process_pdfs_to_txt():
 
 if __name__ == "__main__":
     # 获取用户输入
-    step = 2
+    step = 1
     
     if step <= 1:
         # 转换pptx为pdf step1
